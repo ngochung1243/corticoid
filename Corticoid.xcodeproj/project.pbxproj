@@ -12,9 +12,12 @@
 		758BB2031FF7C0C600CE3E0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758BB2011FF7C0C600CE3E0E /* Main.storyboard */; };
 		758BB2051FF7C0C600CE3E0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 758BB2041FF7C0C600CE3E0E /* Assets.xcassets */; };
 		758BB2081FF7C0C600CE3E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758BB2061FF7C0C600CE3E0E /* LaunchScreen.storyboard */; };
+		758BB2111FF7C57300CE3E0E /* corticoid.epub in Resources */ = {isa = PBXBuildFile; fileRef = 758BB2101FF7C57300CE3E0E /* corticoid.epub */; };
+		79BA6C2EBE6F521FF3C4A859 /* Pods_Corticoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E6E8EA68E43DB4CB5B21D5 /* Pods_Corticoid.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17663E2BEB2FDE98A3F3CE7A /* Pods-Corticoid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corticoid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid.release.xcconfig"; sourceTree = "<group>"; };
 		758BB1FA1FF7C0C600CE3E0E /* Corticoid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Corticoid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758BB1FD1FF7C0C600CE3E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758BB1FF1FF7C0C600CE3E0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		758BB2041FF7C0C600CE3E0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		758BB2071FF7C0C600CE3E0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		758BB2091FF7C0C600CE3E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		758BB2101FF7C57300CE3E0E /* corticoid.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = corticoid.epub; sourceTree = "<group>"; };
+		76C860E9DFA240542C9CAE5E /* Pods-Corticoid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corticoid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid.debug.xcconfig"; sourceTree = "<group>"; };
+		F8E6E8EA68E43DB4CB5B21D5 /* Pods_Corticoid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Corticoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BA6C2EBE6F521FF3C4A859 /* Pods_Corticoid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				758BB1FC1FF7C0C600CE3E0E /* Corticoid */,
 				758BB1FB1FF7C0C600CE3E0E /* Products */,
+				CF79AE2B05DFC1E0F45DA501 /* Pods */,
+				84C5DF7FA47B2AE60BDBE347 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +63,7 @@
 		758BB1FC1FF7C0C600CE3E0E /* Corticoid */ = {
 			isa = PBXGroup;
 			children = (
+				758BB20F1FF7C55B00CE3E0E /* Resource */,
 				758BB1FD1FF7C0C600CE3E0E /* AppDelegate.swift */,
 				758BB1FF1FF7C0C600CE3E0E /* ViewController.swift */,
 				758BB2011FF7C0C600CE3E0E /* Main.storyboard */,
@@ -64,6 +74,31 @@
 			path = Corticoid;
 			sourceTree = "<group>";
 		};
+		758BB20F1FF7C55B00CE3E0E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				758BB2101FF7C57300CE3E0E /* corticoid.epub */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		84C5DF7FA47B2AE60BDBE347 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8E6E8EA68E43DB4CB5B21D5 /* Pods_Corticoid.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF79AE2B05DFC1E0F45DA501 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76C860E9DFA240542C9CAE5E /* Pods-Corticoid.debug.xcconfig */,
+				17663E2BEB2FDE98A3F3CE7A /* Pods-Corticoid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 758BB20C1FF7C0C600CE3E0E /* Build configuration list for PBXNativeTarget "Corticoid" */;
 			buildPhases = (
+				87EDA080774314CF4273CD0D /* [CP] Check Pods Manifest.lock */,
 				758BB1F61FF7C0C600CE3E0E /* Sources */,
 				758BB1F71FF7C0C600CE3E0E /* Frameworks */,
 				758BB1F81FF7C0C600CE3E0E /* Resources */,
+				3DA8B9C58DFE4C7A58FC558B /* [CP] Embed Pods Frameworks */,
+				D43D696E104CFBE300F22318 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +162,83 @@
 			buildActionMask = 2147483647;
 			files = (
 				758BB2081FF7C0C600CE3E0E /* LaunchScreen.storyboard in Resources */,
+				758BB2111FF7C57300CE3E0E /* corticoid.epub in Resources */,
 				758BB2051FF7C0C600CE3E0E /* Assets.xcassets in Resources */,
 				758BB2031FF7C0C600CE3E0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DA8B9C58DFE4C7A58FC558B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AEXML/AEXML.framework",
+				"${BUILT_PRODUCTS_DIR}/FolioReaderKit/FolioReaderKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FontBlaster/FontBlaster.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQWebViewController/JSQWebViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/MenuItemKit/MenuItemKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/ZFDragableModalTransition/ZFDragableModalTransition.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AEXML.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FolioReaderKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontBlaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQWebViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MenuItemKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFDragableModalTransition.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87EDA080774314CF4273CD0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Corticoid-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D43D696E104CFBE300F22318 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		758BB1F61FF7C0C600CE3E0E /* Sources */ = {
@@ -272,30 +381,34 @@
 		};
 		758BB20D1FF7C0C600CE3E0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76C860E9DFA240542C9CAE5E /* Pods-Corticoid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CL3BD6632V;
 				INFOPLIST_FILE = Corticoid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hungdoan.Corticoid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		758BB20E1FF7C0C600CE3E0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17663E2BEB2FDE98A3F3CE7A /* Pods-Corticoid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CL3BD6632V;
 				INFOPLIST_FILE = Corticoid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hungdoan.Corticoid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

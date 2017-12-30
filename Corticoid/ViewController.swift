@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import FolioReaderKit
 
-class ViewController: UIViewController {
+class ViewController: FolioReaderContainer {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        setupBook()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func setupBook() {
+        let config = FolioReaderConfig()
+        config.scrollDirection = .horizontalWithVerticalContent
+        config.allowSharing = false
+        config.enableTTS = false
+        config.shouldHideNavigationOnTap = false	
+        
+        let bookPath = Bundle.main.path(forResource: "corticoid", ofType: "epub")
+        setupConfig(config, epubPath: bookPath ?? "")
     }
-
-
 }
 

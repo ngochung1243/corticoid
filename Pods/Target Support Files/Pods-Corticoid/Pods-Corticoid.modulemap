@@ -1,0 +1,6 @@
+framework module Pods_Corticoid {
+  umbrella header "Pods-Corticoid-umbrella.h"
+
+  export *
+  module * { export * }
+}
