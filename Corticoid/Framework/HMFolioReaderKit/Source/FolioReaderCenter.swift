@@ -278,7 +278,8 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         rightBarIcons.append(contentsOf: [font])
         
         //Hung - Add Bookmark icon
-        bookmarkButton = UIBarButtonItem(image: fontIcon, style: .plain, target: self, action: #selector(bookmarkPage))
+        let noBookmarkImage = UIImage(readerImageNamed: "icon-navbar-no-bookmark")?.ignoreSystemTint(withConfiguration: self.readerConfig)
+        bookmarkButton = UIBarButtonItem(image: noBookmarkImage, style: .plain, target: self, action: #selector(bookmarkPage))
         checkBookmark()
         rightBarIcons.append(bookmarkButton)
 

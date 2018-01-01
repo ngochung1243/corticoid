@@ -274,7 +274,7 @@ open class FolioReaderWebView: UIWebView {
             menuItems = [yellowItem, greenItem, blueItem, pinkItem, underlineItem]
         } else {
             // default menu
-            menuItems = [highlightItem, defineItem, shareItem]
+            menuItems = [highlightItem, shareItem]
 
             if (self.book.hasAudio() == true || self.readerConfig.enableTTS == true) {
                 menuItems.insert(playAudioItem, at: 0)

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24C9ECDF9760CE45D3B270BD /* Pods_Corticoid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D5876D1FF8B02900BF753F /* Pods_Corticoid.framework */; };
+		7557B41F1FFAA2E00077A1E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7557B4211FFAA2E00077A1E0 /* Localizable.strings */; };
 		758BB1FE1FF7C0C600CE3E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BB1FD1FF7C0C600CE3E0E /* AppDelegate.swift */; };
 		758BB2001FF7C0C600CE3E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758BB1FF1FF7C0C600CE3E0E /* ViewController.swift */; };
 		758BB2031FF7C0C600CE3E0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 758BB2011FF7C0C600CE3E0E /* Main.storyboard */; };
@@ -89,6 +90,8 @@
 
 /* Begin PBXFileReference section */
 		17663E2BEB2FDE98A3F3CE7A /* Pods-Corticoid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corticoid.release.xcconfig"; path = "Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid.release.xcconfig"; sourceTree = "<group>"; };
+		7557B4201FFAA2E00077A1E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7557B4221FFAA3080077A1E0 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		758BB1FA1FF7C0C600CE3E0E /* Corticoid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Corticoid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		758BB1FD1FF7C0C600CE3E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		758BB1FF1FF7C0C600CE3E0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				758BB2041FF7C0C600CE3E0E /* Assets.xcassets */,
 				758BB2061FF7C0C600CE3E0E /* LaunchScreen.storyboard */,
 				758BB2091FF7C0C600CE3E0E /* Info.plist */,
+				7557B4211FFAA2E00077A1E0 /* Localizable.strings */,
 			);
 			path = Corticoid;
 			sourceTree = "<group>";
@@ -447,6 +451,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 758BB1F11FF7C0C600CE3E0E;
 			productRefGroup = 758BB1FB1FF7C0C600CE3E0E /* Products */;
@@ -472,6 +477,7 @@
 				75D582CB1FF8AA5E00BF753F /* Lora-BoldItalic.ttf in Resources */,
 				75D582A11FF8AA5E00BF753F /* README.md in Resources */,
 				75D582D21FF8AA5E00BF753F /* Images.xcassets in Resources */,
+				7557B41F1FFAA2E00077A1E0 /* Localizable.strings in Resources */,
 				75D582CE1FF8AA5E00BF753F /* Raleway-Bold.ttf in Resources */,
 				758BB2111FF7C57300CE3E0E /* corticoid.epub in Resources */,
 				75D582C11FF8AA5E00BF753F /* Bridge.js in Resources */,
@@ -611,6 +617,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7557B4211FFAA2E00077A1E0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7557B4201FFAA2E00077A1E0 /* en */,
+				7557B4221FFAA3080077A1E0 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		758BB2011FF7C0C600CE3E0E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -634,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -691,6 +707,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
