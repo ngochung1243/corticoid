@@ -1,0 +1,10 @@
+framework module MenuItemKit {
+  umbrella header "MenuItemKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MenuItemKit.__Swift {
+    exclude header "MenuItemKit-Swift.h"
+}
