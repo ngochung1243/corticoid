@@ -164,6 +164,10 @@ class FolioReaderHighlightList: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return NSLocalizedString("Delete", comment: "")
+    }
+    
     // MARK: - Handle rotation transition
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
