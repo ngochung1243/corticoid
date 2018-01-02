@@ -122,7 +122,7 @@ class HMBookmarkCell: UITableViewCell {
         titleLabel.text = bookmark.title ?? ""
         titleLabel.textColor = reader.isNight(config.menuTextColor, UIColor.black)
         
-        pageLabel.text = NSLocalizedString("Page: \(bookmark.page ?? 0)", comment: "")
+        pageLabel.text = NSLocalizedString("Page", comment: "") + ": \(bookmark.page ?? 0)"
         pageLabel.textColor = reader.isNight(config.menuTextColor, UIColor.black)
         
         self.backgroundColor = reader.isNight(config.nightModeMenuBackground, config.menuBackgroundColor)
