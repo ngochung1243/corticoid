@@ -14,4 +14,6 @@ pod 'Realm', '2.10.2'
 pod 'RealmSwift', '2.10.2'
 pod 'SSZipArchive', '1.8.1'
 pod 'ZFDragableModalTransition', '0.6'
+pod 'EAIntroView'
+pod 'Popover'
 end

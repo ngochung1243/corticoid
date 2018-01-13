@@ -35,7 +35,7 @@ class FolioReaderChapterList: UITableViewController {
         self.delegate = delegate
         self.book = book
 
-        super.init(style: UITableViewStyle.plain)
+        super.init(style: .plain)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -61,47 +61,60 @@ class FolioReaderChapterList: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tocItems.count
+        return section == 0 ? 1 : tocItems.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kReuseCellIdentifier, for: indexPath) as! FolioReaderChapterListCell
-
-        cell.setup(withConfiguration: self.readerConfig)
-        let tocReference = tocItems[(indexPath as NSIndexPath).row]
-        let isSection = tocReference.children.count > 0
-
-        cell.indexLabel?.text = tocReference.title.trimmingCharacters(in: .whitespacesAndNewlines)
-
-        // Add audio duration for Media Ovelay
-        if let resource = tocReference.resource {
-            if let mediaOverlay = resource.mediaOverlay {
-                let duration = self.book.durationFor("#"+mediaOverlay)
-
-                if let durationFormatted = (duration != nil ? duration : "")?.clockTimeToMinutesString() {
-                    let text = cell.indexLabel?.text ?? ""
-                    cell.indexLabel?.text = text + (duration != nil ? (" - " + durationFormatted) : "")
-                }
-            }
-        }
-
-        // Mark current reading chapter
-        if
-            let currentPageNumber = self.folioReader.readerCenter?.currentPageNumber,
-            let reference = self.book.spine.spineReferences[safe: currentPageNumber - 1],
-            (tocReference.resource != nil) {
-            let resource = reference.resource
-            cell.indexLabel?.textColor = (tocReference.resource == resource ? self.readerConfig.tintColor : self.readerConfig.menuTextColor)
-        }
-
         cell.layoutMargins = UIEdgeInsets.zero
         cell.preservesSuperviewLayoutMargins = false
-        cell.contentView.backgroundColor = isSection ? UIColor(white: 0.7, alpha: 0.1) : UIColor.clear
         cell.backgroundColor = UIColor.clear
+        cell.setup(withConfiguration: self.readerConfig)
+        
+        switch indexPath.section {
+        case 0:
+            cell.indexLabel?.text = "GIỚI THIỆU SÁCH"
+            let fontDescriptor = cell.indexLabel?.font.fontDescriptor.withSymbolicTraits(.traitBold)
+            let boldFont = UIFont(descriptor: fontDescriptor!, size: 15)
+            cell.indexLabel?.font = boldFont
+        case 1:
+            cell.setup(withConfiguration: self.readerConfig)
+            let tocReference = tocItems[(indexPath as NSIndexPath).row]
+            let isSection = tocReference.children.count > 0
+            
+            cell.indexLabel?.text = tocReference.title.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Add audio duration for Media Ovelay
+            if let resource = tocReference.resource {
+                if let mediaOverlay = resource.mediaOverlay {
+                    let duration = self.book.durationFor("#"+mediaOverlay)
+                    
+                    if let durationFormatted = (duration != nil ? duration : "")?.clockTimeToMinutesString() {
+                        let text = cell.indexLabel?.text ?? ""
+                        cell.indexLabel?.text = text + (duration != nil ? (" - " + durationFormatted) : "")
+                    }
+                }
+            }
+            
+            // Mark current reading chapter
+            if
+                let currentPageNumber = self.folioReader.readerCenter?.currentPageNumber,
+                let reference = self.book.spine.spineReferences[safe: currentPageNumber - 1],
+                (tocReference.resource != nil) {
+                let resource = reference.resource
+                cell.indexLabel?.textColor = (tocReference.resource == resource ? self.readerConfig.tintColor : self.readerConfig.menuTextColor)
+            }
+            
+            cell.contentView.backgroundColor = isSection ? UIColor(white: 0.7, alpha: 0.1) : UIColor.clear
+            
+        default:
+            break;
+        }
+        
         return cell
     }
 
