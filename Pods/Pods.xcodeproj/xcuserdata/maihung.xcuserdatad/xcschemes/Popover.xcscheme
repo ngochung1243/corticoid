@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8225036735C7B64F408AE208A8070A39'
-               BlueprintName = 'RealmSwift'
+               BlueprintIdentifier = 'DFF0B6696F23EC79A5B139FB8FBB393C'
+               BlueprintName = 'Popover'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RealmSwift.framework'>
+               BuildableName = 'Popover.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

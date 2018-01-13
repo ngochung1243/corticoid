@@ -266,7 +266,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         var rightBarIcons = [UIBarButtonItem]()
 
         if (self.readerConfig.allowSharing == true) {
-            rightBarIcons.append(UIBarButtonItem(image: shareIcon, style: .plain, target: self, action:#selector(shareChapter(_:))))
+            rightBarIcons.append(UIBarButtonItem(image: shareIcon, style: .plain, target: self, action:#selector(shareDownloadLink)))
         }
 
         if (self.book.hasAudio() == true || self.readerConfig.enableTTS == true) {
@@ -447,9 +447,9 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
             readerContainer.setNeedsStatusBarAppearanceUpdate()
 
             // Show minutes indicator
-            if (shouldShowIndicator == true) {
-                self.pageIndicatorView?.minutesLabel.alpha = shouldHide ? 0 : 1
-            }
+//            if (shouldShowIndicator == true) {
+//                self.pageIndicatorView?.minutesLabel.alpha = shouldHide ? 0 : 1
+//            }
         })
         self.navigationController?.setNavigationBarHidden(shouldHide, animated: true)
     }
@@ -993,6 +993,12 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
 
             present(activityViewController, animated: true, completion: nil)
         }
+    }
+    
+    func shareDownloadLink() {
+        let activityViewController = UIActivityViewController(activityItems: ["https://itunes.apple.com/vn/app/c%E1%BA%A9m-nang-vi%C3%AAm-da-corticoid/id1302852868?mt=8"], applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToVimeo]
+        present(activityViewController, animated: true, completion: nil)
     }
 
     /**

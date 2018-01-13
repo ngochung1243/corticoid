@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9029CA3CCAF9226583F084C180BAE140"
+               BlueprintIdentifier = "9B990D94B34C20AE277A369B6141B425"
                BuildableName = "Pods_Corticoid.framework"
                BlueprintName = "Pods-Corticoid"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9029CA3CCAF9226583F084C180BAE140"
+            BlueprintIdentifier = "9B990D94B34C20AE277A369B6141B425"
             BuildableName = "Pods_Corticoid.framework"
             BlueprintName = "Pods-Corticoid"
             ReferencedContainer = "container:Pods.xcodeproj">

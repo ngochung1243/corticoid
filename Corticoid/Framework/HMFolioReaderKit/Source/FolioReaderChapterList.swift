@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Popover
 
 /// Table Of Contents delegate
 @objc protocol FolioReaderChapterListDelegate: class {
@@ -28,6 +29,8 @@ class FolioReaderChapterList: UITableViewController {
     fileprivate var book: FRBook
     fileprivate var readerConfig: FolioReaderConfig
     fileprivate var folioReader: FolioReader
+    
+    let popover = Popover()
 
     init(folioReader: FolioReader, readerConfig: FolioReaderConfig, book: FRBook, delegate: FolioReaderChapterListDelegate?) {
         self.readerConfig = readerConfig
@@ -121,12 +124,31 @@ class FolioReaderChapterList: UITableViewController {
     // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let tocReference = tocItems[(indexPath as NSIndexPath).row]
-        delegate?.chapterList(self, didSelectRowAtIndexPath: indexPath, withTocReference: tocReference)
+        switch indexPath.section {
+        case 0:
+            let bookCoverView = UIImageView(image: UIImage(named: "Cover"))
+            let closeButton = UIButton()
+            closeButton.frame = CGRect(x: 20, y: 20, width: 24, height: 24)
+            closeButton.setImage(UIImage(named: "ic_close")!.ignoreSystemTint(withConfiguration: self.readerConfig), for: .normal)
+            closeButton.addTarget(self, action: #selector(closeBookCoverView), for: .touchUpInside)
+            bookCoverView.addSubview(closeButton)
+            bookCoverView.frame = UIScreen.main.bounds
+            bookCoverView.isUserInteractionEnabled = true
+            popover.show(bookCoverView, point: CGPoint(x: 0, y: 0))
+        case 1:
+            let tocReference = tocItems[(indexPath as NSIndexPath).row]
+            delegate?.chapterList(self, didSelectRowAtIndexPath: indexPath, withTocReference: tocReference)
+            dismiss {
+                self.delegate?.chapterList(didDismissedChapterList: self)
+            }
+        default:
+            break
+        }
         
         tableView.deselectRow(at: indexPath, animated: true)
-        dismiss { 
-            self.delegate?.chapterList(didDismissedChapterList: self)
-        }
+    }
+    
+    @objc func closeBookCoverView() {
+        popover.dismiss()
     }
 }

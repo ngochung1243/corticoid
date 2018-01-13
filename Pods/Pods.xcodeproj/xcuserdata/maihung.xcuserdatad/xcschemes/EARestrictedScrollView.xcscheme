@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8225036735C7B64F408AE208A8070A39'
-               BlueprintName = 'RealmSwift'
+               BlueprintIdentifier = '58AAD2C9E898747F2F4ABF348E6325F2'
+               BlueprintName = 'EARestrictedScrollView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'RealmSwift.framework'>
+               BuildableName = 'EARestrictedScrollView.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
