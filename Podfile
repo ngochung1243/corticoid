@@ -16,4 +16,6 @@ pod 'SSZipArchive', '1.8.1'
 pod 'ZFDragableModalTransition', '0.6'
 pod 'EAIntroView'
 pod 'Popover'
+pod 'Fabric'
+pod 'Crashlytics'
 end

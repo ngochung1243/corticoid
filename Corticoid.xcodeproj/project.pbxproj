@@ -418,6 +418,7 @@
 				3DA8B9C58DFE4C7A58FC558B /* [CP] Embed Pods Frameworks */,
 				D43D696E104CFBE300F22318 /* [CP] Copy Pods Resources */,
 				75D583691FF8AD4000BF753F /* Embed Frameworks */,
+				E55A61F6200AF217009CE16B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -570,6 +571,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E55A61F6200AF217009CE16B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 5b3327eecc71d3e6af29d1b0ad0b198e1cf991c7 a394f7157d2b1cbac8cb8e317209edcc57d6fbefcdf6bd7b32cf6eb1fd41fe50";
 		};
 /* End PBXShellScriptBuildPhase section */
 
