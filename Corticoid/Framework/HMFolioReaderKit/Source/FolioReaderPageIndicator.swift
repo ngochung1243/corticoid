@@ -96,7 +96,7 @@ class FolioReaderPageIndicator: UIView {
 //            pagesLabel.text = " \(pagesRemaining) " + self.readerConfig.localizedReaderManyPagesLeft
 //        }
         
-        pagesLabel.text = "\(currentPage)/\(totalPages!) \(NSLocalizedString("page", comment: ""))"
+        pagesLabel.text = "\(NSLocalizedString("page", comment: "")) \(currentPage)/\(totalPages!)"
 
 
 //        let minutesRemaining = Int(ceil(CGFloat((pagesRemaining * totalMinutes)/totalPages)))
