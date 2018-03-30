@@ -73,6 +73,7 @@
 		75D582D61FF8AA5E00BF753F /* SMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D580C51FF8AA5E00BF753F /* SMSegment.swift */; };
 		75D582D71FF8AA5E00BF753F /* SMSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D580C61FF8AA5E00BF753F /* SMSegmentView.swift */; };
 		75D5876F1FF93D8900BF753F /* HMBookmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D5876E1FF93D8900BF753F /* HMBookmarkList.swift */; };
+		E5294CC42064916D0088DD01 /* corticoid_v2.epub in Resources */ = {isa = PBXBuildFile; fileRef = E5294CC32064916D0088DD01 /* corticoid_v2.epub */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -161,6 +162,7 @@
 		75D5876D1FF8B02900BF753F /* Pods_Corticoid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Corticoid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D5876E1FF93D8900BF753F /* HMBookmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBookmarkList.swift; sourceTree = "<group>"; };
 		76C860E9DFA240542C9CAE5E /* Pods-Corticoid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Corticoid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Corticoid/Pods-Corticoid.debug.xcconfig"; sourceTree = "<group>"; };
+		E5294CC32064916D0088DD01 /* corticoid_v2.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = corticoid_v2.epub; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 		758BB20F1FF7C55B00CE3E0E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E5294CC32064916D0088DD01 /* corticoid_v2.epub */,
 				758BB2101FF7C57300CE3E0E /* corticoid.epub */,
 			);
 			path = Resource;
@@ -470,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				758BB2081FF7C0C600CE3E0E /* LaunchScreen.storyboard in Resources */,
+				E5294CC42064916D0088DD01 /* corticoid_v2.epub in Resources */,
 				75D582CF1FF8AA5E00BF753F /* Raleway-BoldItalic.ttf in Resources */,
 				75D582C41FF8AA5E00BF753F /* Andada-Italic.otf in Resources */,
 				75D582D11FF8AA5E00BF753F /* Raleway-Regular.ttf in Resources */,
@@ -791,7 +795,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vn.hoanghac.book;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2c7ce975-0872-4ab0-b2cb-54c1c23ac574";
+				PROVISIONING_PROFILE = "fa8c209c-4026-47a6-84f0-f24b61ad4c31";
 				PROVISIONING_PROFILE_SPECIFIER = Corticoid_develop;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -815,7 +819,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vn.hoanghac.book;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e9192efa-6120-437d-b3ec-a6e270a601b7";
+				PROVISIONING_PROFILE = "b409a671-9c8a-421b-ab60-f6afede89cec";
 				PROVISIONING_PROFILE_SPECIFIER = Corticoid;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -31,7 +31,7 @@ class ViewController: FolioReaderContainer {
         config.enableTTS = false
         config.shouldHideNavigationOnTap = false	
         
-        let bookPath = Bundle.main.path(forResource: "corticoid", ofType: "epub")
+        let bookPath = Bundle.main.path(forResource: "corticoid_v2", ofType: "epub")
         setupConfig(config, epubPath: bookPath ?? "")
     }
     
